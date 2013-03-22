@@ -1,10 +1,20 @@
+//Exercise 01
+
+function Point2D(x,y){
+    this.x = x;
+    this.y = y;
+    this.coordinates = function(){
+     return "X=" + this.x + " ,Y=" + this.y;
+     }
+}
+
 //Exercise 02
 
 //a
 
 function Edge(p1,p2){
-    this.p1 = new Point2D(p1.x, p1.y);
-    this.p2 = new Point2D(p2.x, p2.y);
+    this.p1 = p1;
+    this.p2 = p2;
     this.x1edge = p1.x;
     this.x2edge = p2.x;
     this.y1edge = p1.y;
