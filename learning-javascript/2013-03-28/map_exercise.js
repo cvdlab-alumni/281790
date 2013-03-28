@@ -53,3 +53,29 @@ var mapping = function(v){
 var sphere = MAP(mapping)(dsfera);
 
 DRAW(sphere);
+
+
+//EX5: toroide
+// http://it.wikipedia.org/wiki/Toro_(geometria)
+
+var dtoro = DOMAIN([[0,2*PI],[0,2*PI]])([72,72]);
+//R = distanza dal centro, > raggio circonferenza
+var R = 3;
+
+var mapping = function(v){
+	var p = v[0];
+	var t = v[1];
+
+	var fc1 = [(R + COS(p)) * COS(t)];
+
+	var fc2 = [(R + COS(p)) * SIN(t)];
+
+	var fc3 = [SIN(p)];
+
+	return [fc1,fc2,fc3];
+};
+
+var toro = MAP(mapping)(dtoro);
+
+DRAW(toro);
+
