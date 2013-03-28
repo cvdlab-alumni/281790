@@ -14,3 +14,5 @@ var y = function(v){
 var mappings = [x,y];
 
 var circonferenza = MAP(mappings)(d0);
+
+DRAW(circonferenza);
