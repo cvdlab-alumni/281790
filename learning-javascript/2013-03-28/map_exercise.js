@@ -55,7 +55,7 @@ var sphere = MAP(mapping)(dsfera);
 DRAW(sphere);
 
 
-//EX5: toroide
+//EX5: toroide con raggio di circonferenza 1
 // http://it.wikipedia.org/wiki/Toro_(geometria)
 
 var dtoro = DOMAIN([[0,2*PI],[0,2*PI]])([72,72]);
@@ -76,6 +76,34 @@ var mapping = function(v){
 };
 
 var toro = MAP(mapping)(dtoro);
+
+DRAW(toro);
+
+
+//EX5: toroide con raggio di circonferenza e distanza dal centro qualsiasi (R>r)
+// http://it.wikipedia.org/wiki/Toro_(geometria)
+
+var dtoro = DOMAIN([[0,2*PI],[0,2*PI]])([72,72]);
+//R = distanza dal centro, > raggio circonferenza
+
+var mapping = function(R,r){
+	
+	return function(v){
+		var p = v[0];
+		var t = v[1];
+
+		var fc1 = [(R + r*COS(p)) * COS(t)];
+
+		var fc2 = [(R + r*COS(p)) * SIN(t)];
+
+		var fc3 = [r*SIN(p)];
+
+		return [fc1,fc2,fc3];
+	};
+
+};
+
+var toro = MAP(mapping(5,1))(dtoro);
 
 DRAW(toro);
 
