@@ -24,7 +24,7 @@ pillars0 = STRUCT([p0_first_row, T([2])([5.5])(p0_second_row)])
 # PILLARS1
 
 p1_first_row_nont = STRUCT(NN(5)([pillar, T([1])([2.5])]))
-p1_first_row = p1_tensor(p1_first_row_nont)
+p1_first_row = center_tensor(p1_first_row_nont)
 
 p1_second_row_partial = STRUCT(NN(3)([pillar, T([1])([2.5])]))
 p1_second_row_nont = STRUCT([p1_second_row_partial, T([1])([2.5*4])(pillar)])
