@@ -56,7 +56,7 @@ VIEW = DRAW;
 // Exercise02
 // Define plan by plan, with names floor0, floor1, floor2, floor3, and floor4, the 5 models of horizontal partitions,
 // and add them to the STRUCT of the building model.
-
+var center_tensor = T([1,2])([-0.125,-0.125]);
 
 // FLOOR0
 var floor0_nont = T([3])([-0.3])(CUBOID([10.25,7,0.3]));
