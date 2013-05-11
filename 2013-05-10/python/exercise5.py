@@ -174,7 +174,7 @@ def profile_yz():
     
     g0 = STRUCT([c0,c1,c2,c3,c4,front])
     gr = STRUCT([c0,c1,c2,c3,c4,retro])
-
+    
     # r_t front
     g1 = R([1,2])(PI)(g0)
     t_g1 = T([2])([5.2])(g1)
@@ -253,7 +253,7 @@ def profile_xy():
     up0 = STRUCT([gen0,uc0,uc1,uc2,uc3,uc4,uc5])
     up1 = STRUCT([up0, T([2])([4.2])(R([2,3])(PI)(up0))])
 
-    gen = STRUCT([gen1, T([3])([4])(up1)])
+    gen = STRUCT([gen1, T([3])([2.7])(R([1,3])(PI/20)(up1))])
 
     return gen
 
