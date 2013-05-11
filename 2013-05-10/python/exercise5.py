@@ -1,16 +1,13 @@
 # exercise5.py
+# Create at least two interesting car surfaces and add them to the mock-up.
 
-#exercise4.py
-
-# Generate the 3D model of a steering wheel (volante :o) specifically designed for Formula and Sport
-# cars (look on the web for common shapes). Mount it the the 2.5D mock-up.
 ###############################################
 
 from pyplasm import *
 import scipy   
 from scipy import *
 
-#####################IMPORTING EXERCISE 2/3
+#####################IMPORTING EXERCISE 2/3/4
 
 # exercise 2.py
 
@@ -529,6 +526,7 @@ r1_steer = R([1,2])(PI/2)(r_steer)
 # VIEW(r1_steer)
 
 # VIEW(STRUCT([profile,wheels,T([1,2,3])([4,1.5,1.7])(r1_steer)]))
+
 
 
 ############################ ESERCIZIO 5 ##############################
