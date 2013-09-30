@@ -241,3 +241,5 @@ function coffee_service(){
 
 	return servizio;
 }
+
+DRAW(coffee_service());

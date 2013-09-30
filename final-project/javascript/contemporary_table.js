@@ -63,3 +63,5 @@ function table(){
 
 	return table;
 }
+
+DRAW(table());

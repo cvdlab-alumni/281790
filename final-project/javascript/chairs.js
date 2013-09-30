@@ -47,3 +47,13 @@ function chair(){
 	chair = STRUCT([c_chair,stb]); 
 	return chair;
 }
+
+function chairs(){
+	var c = S([0,1,2])([0.5,0.5,0.5])(chair());
+	var r_chair = R([0,1])(PI)(c);
+	var chairs = STRUCT([c, T([0,1])([20,-6])(R([0,1])(PI)(c))]);
+	return chairs;		  
+}
+
+
+DRAW(chairs());

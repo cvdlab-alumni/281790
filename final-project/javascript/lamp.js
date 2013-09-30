@@ -111,5 +111,7 @@ function lamp(){
 
 }
 
+DRAW(lamp());
+
 
 
